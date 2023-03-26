@@ -19,7 +19,7 @@ classifiers = [
 dependencies = [
     "networkx",
     "matplotlib",
-    "mpl_toolkits",
+    "mpl_toolkits.basemap",
 ]
 
 [project.urls]
