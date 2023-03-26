@@ -16,13 +16,18 @@ def draw_nx(G, llon=10, llat=40, ulon=30, ulat=55, dlon=1, dlat=1, ns=10, nc='re
 
     lats = []
     lons = []
+    nolongitude = []
+    nolatitude = []
 
     for node in G.nodes():
         longitude = G.nodes[node].get('Longitude')
+
         if longitude == None:
+            nolongitude.append(node)
             longitude = dlon
         latitude = G.nodes[node].get('Latitude')
         if latitude == None:
+            nolatitude.append(node)
             latitude = dlat
         lats.append(latitude)
         lons.append(longitude)
@@ -43,3 +48,5 @@ def draw_nx(G, llon=10, llat=40, ulon=30, ulat=55, dlon=1, dlat=1, ns=10, nc='re
     m.bluemarble()
 
     plt.show()
+
+    return nolongitude,nolatitude
