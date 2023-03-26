@@ -3,8 +3,8 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "Oublie-Python"
-version = "1.0.1"
+name = "Oublie"
+version = "1.0.0"
 authors = [
   { name="Oublie", email="313166062@qq.com" },
 ]
@@ -19,7 +19,6 @@ classifiers = [
 dependencies = [
     "networkx",
     "matplotlib",
-    "mpl_toolkits.basemap",
 ]
 
 [project.urls]
